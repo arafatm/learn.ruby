@@ -1,8 +1,9 @@
 # test/test_ceaser_cipher.rb
-require 'test/unit'
-require_relative '../lib/ceasar_cipher'
+require 'minitest/autorun'
+require_relative '../../../test/test_helper'
+require_relative '../lib/ceaser_cipher'
 
-class TestceaserCipher < Test::Unit::TestCase
+class TestceaserCipher < Minitest::Test
   def test_shifts_lowercase_letters_correctly
     assert_equal('def', ceaser_cipher('abc', 3))
   end
